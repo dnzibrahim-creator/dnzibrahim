@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Çek Yönetimi Dashboard",
+  "description": "Çeklerinizi (bekleyen, vadesi geçmiş ve tamamlanan) akıllı AI tarama, gelişmiş raporlama ve takvim entegrasyonu ile kolayca yönetebileceğiniz modern bir web paneli.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
