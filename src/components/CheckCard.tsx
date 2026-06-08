@@ -128,9 +128,9 @@ export default function CheckCard({
         </div>
       )}
 
-      <div className="p-4">
+      <div className="p-4 min-h-[182px] border-solid">
         {/* Header containing Bank, Badge and Sum */}
-        <div className="flex justify-between items-start mb-3 pb-3 border-b border-gray-100">
+        <div className="flex justify-between items-start mb-3 pb-3 border-b border-gray-100 min-h-[58px]">
           <div className="flex gap-2.5">
             <span 
               className={`flex items-center justify-center w-8 h-8 rounded-md shrink-0 ${
@@ -266,13 +266,13 @@ export default function CheckCard({
           <div className="flex items-center gap-1.5">
             <Calendar className="w-3.5 h-3.5 text-gray-400 shrink-0" />
             <span className="text-[11px] text-gray-400 w-20 shrink-0">Vade:</span>
-            <span className={`font-semibold ${isOverdue ? "text-rose-600" : "text-gray-800"}`}>
+            <span className={`font-semibold text-xs ${isOverdue ? "text-[#8a2e16] bg-[#f7f0f0] border border-[#f0f3f8] w-[76px] inline-block text-center rounded py-0.5" : "text-gray-800"}`}>
               {formatDate(check.dueDate)}
             </span>
           </div>
 
           {check.status === "endorsed" && check.givenTo && (
-            <div className="flex items-center gap-1.5 md:col-span-2 bg-indigo-50/50 p-2 rounded-md border border-indigo-50 mt-0.5">
+            <div className="flex items-center gap-1.5 md:col-span-2 bg-indigo-50/50 p-2 rounded-md border border-indigo-50 mt-0.5 min-h-[30px]">
                <ArrowRightLeft className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
                <span className="text-[10px] text-indigo-700 w-20 shrink-0 font-medium">Ciro Edilen:</span>
                <span className="font-semibold text-indigo-900 truncate">{check.givenTo}</span>
@@ -280,7 +280,7 @@ export default function CheckCard({
           )}
 
           {check.note && (
-             <div className="flex items-start gap-1.5 md:col-span-2 bg-slate-50 p-2 rounded-md border border-slate-100 mt-0.5">
+             <div className="flex items-start gap-1.5 md:col-span-2 bg-slate-50 p-2 rounded-md border border-slate-100 mt-0.5 min-h-[30px]">
                 <FileText className="w-3.5 h-3.5 text-gray-400 mt-0.5 shrink-0" />
                 <span className="text-[10px] text-gray-500 italic leading-relaxed">{check.note}</span>
              </div>
